@@ -86,7 +86,47 @@ body {
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 .page {
 	flex: 1 1 auto;
+  &__intro {}
 }
 //===================================================================================================================================
-
+.intro {
+  display: flex;
+  min-height: 100vh;
+  background: url('../img/intro-bg.jpg') center / cover no-repeat;
+  &::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0.87deg, rgba(2, 55, 135, 0.9) 0.69%, rgba(81, 38, 174, 0.4736) 100.48%, rgba(38, 92, 174, 0.0102906) 100.49%, rgba(195, 195, 196, 0.00520833) 100.5%, #76A6EF 100.51%);
+  }
+  &__container {
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fff;
+    z-index: 2;
+    @media (min-width:$md2+px){
+      padding: 100px 455px 100px 15px; 
+    }
+    @media (max-width:$md2+px){
+      padding: 100px 15px 100px 15px; 
+      text-align: center;
+    }
+  }
+  &__title {
+    @include adaptiv-value("font-size", 60, 30, 1);
+    font-weight: 700;
+    line-height: 82 / 60 * 100%;
+    &:not(:last-child) {margin: 0px 0px 21px/60px * 1em 0px;}
+  }
+  &__text {
+    @include adaptiv-value("font-size", 29, 18, 1);
+    line-height: 40 / 29 * 100%;
+  }
+}
 //</ОСНОВНОЙ БЛОК>====================================================================================================
