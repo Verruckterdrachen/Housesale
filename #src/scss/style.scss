@@ -87,6 +87,9 @@ body {
 .page {
 	flex: 1 1 auto;
   &__intro {}
+  &__testimonials {
+    padding: 75px 0;
+  }
 }
 //===================================================================================================================================
 .intro {
@@ -110,11 +113,9 @@ body {
     align-items: flex-start;
     color: #fff;
     z-index: 2;
-    @media (min-width:$md2+px){
-      padding: 100px 455px 100px 15px; 
-    }
+    padding: 100px 455px 100px 15px; 
     @media (max-width:$md2+px){
-      padding: 100px 15px 100px 15px; 
+      padding-right: 15px; 
       text-align: center;
     }
   }
@@ -129,4 +130,68 @@ body {
     line-height: 40 / 29 * 100%;
   }
 }
+//============================================================================
+.testimonials {
+  &__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0px -11px;
+  }
+}
+.item-testimonials {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 33.333%;
+  padding: 0px 11px; 
+  @media (max-width:$md3+px){
+    flex: 0 1 50%; 
+    margin: 0px 0px 22px 0px;
+  }
+  @media (max-width:$md4+px){
+    flex: 1 1 auto; 
+  }
+  @media (any-hover: hover){
+    &:hover{
+      .item-testimonials__button {
+        background: #fff url('../img/arrow.svg') center no-repeat;
+      }
+      .item-testimonials__body {
+        background-color: $primaryColor;
+        padding-left: 35px;
+      }    
+    }
+  }
+  &__image {
+    padding: 0px 0px 414px/399px * 100% 0px;
+  }
+  &__body {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    padding: 24px;
+    @include adaptiv-value("padding-top", 45, 24, 1);
+    @include adaptiv-value("padding-bottom", 45, 24, 1);
+    transition: all 0.3s ease 0s;
+    box-shadow: 0px 4px 59px rgba(171, 124, 0, 0.29);
+  }
+  &__button {
+    display: flex;
+    flex: 0 0 38px;
+    height: 38px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @include adaptiv-value("margin-right", 25, 15, 1);
+    background: $primaryColor url('../img/arrow.svg') center no-repeat;
+    transition: background 0.3s ease 0s;
+  }
+  &__text {
+    color: #000;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19 / 14 * 100%;
+  }
+}
+//============================================================================
+
 //</ОСНОВНОЙ БЛОК>====================================================================================================
