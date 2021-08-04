@@ -105,8 +105,9 @@ body {
   &__gallery {
     @include adaptiv-value("padding-bottom", 100, 60, 1);
   }
-  &__ideas {
-    @include adaptiv-value("padding-bottom", 50, 60, 1);
+  &__catalog {
+    @include adaptiv-value("padding-top", 60, 30, 1);
+    @include adaptiv-value("padding-bottom", 100, 60, 1);
   }
 }
 //===================================================================================================================================
@@ -344,6 +345,8 @@ body {
     @media (max-width:$md2+px){
       flex-direction: column;
     }
+    @include adaptiv-value("padding-bottom", 50, 60, 1);
+    border-bottom: 1px solid #D7D6D6;
   }
   &__content {
     *:last-child{
@@ -406,4 +409,59 @@ body {
     }
   }
 }
+//============================================================================
+.catalog {
+  &__body {
+    display: flex;
+    @media (max-width:$md3+px){
+      flex-direction: column; 
+    }
+  }
+  &__items {
+    flex: 1 1 auto;
+    @media (min-width:$md3+px){
+      padding: 160px 40px 0px 0px; 
+    }
+    @media (max-width:$md3+px){
+       margin: 0px 0px 40px 0px; 
+    }
+  }
+  &__item {
+    color: #000;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27 / 20 * 100%;
+    &:not(:last-child) {
+      margin: 0px 8px 0px 0px;
+      padding: 0px 8px 0px 0px;
+      border-right: 1px solid #000;
+    }
+  }
+  &__content {
+    @media (min-width:$md3+px){
+      flex: 0 0 530px; 
+    }
+  }
+  &__title {
+    @include adaptiv-value("margin-bottom", 60, 30, 1);
+  }
+  &__subtitle {
+    color: #4A4949;
+    font-size: 24px;
+    line-height: 33 / 24 * 100%;
+    @include adaptiv-value("margin-bottom", 45, 20, 1);
+  }
+  &__text {
+    @include adaptiv-value("font-size", 20, 16, 1);
+    line-height: 27 / 20 * 100%;
+    color: #606060;
+    p {
+      &:not(:last-child) {
+        @include adaptiv-value("margin-bottom", 25, 10, 1);
+      }
+    }
+  }
+}
+//============================================================================
+
 //</ОСНОВНОЙ БЛОК>====================================================================================================
