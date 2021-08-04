@@ -1029,7 +1029,7 @@ body.ie ._ibg img {
 }
 @media (max-width: 1270px) {
   .page__testimonials {
-    padding-bottom: calc(30px + 45 * ((100vw - 320px) / 950));
+    padding-bottom: calc(50px + 25 * ((100vw - 320px) / 950));
   }
 }
 .page__about {
@@ -1043,7 +1043,7 @@ body.ie ._ibg img {
 }
 @media (max-width: 1270px) {
   .page__about {
-    padding-bottom: calc(30px + 70 * ((100vw - 320px) / 950));
+    padding-bottom: calc(50px + 50 * ((100vw - 320px) / 950));
   }
 }
 .page__phone {
@@ -1057,7 +1057,15 @@ body.ie ._ibg img {
 }
 @media (max-width: 1270px) {
   .page__phone {
-    padding-bottom: calc(30px + 70 * ((100vw - 320px) / 950));
+    padding-bottom: calc(50px + 50 * ((100vw - 320px) / 950));
+  }
+}
+.page__houses {
+  padding-bottom: 100px;
+}
+@media (max-width: 1270px) {
+  .page__houses {
+    padding-bottom: calc(50px + 50 * ((100vw - 320px) / 950));
   }
 }
 
@@ -1353,4 +1361,30 @@ body.ie ._ibg img {
 .phone__form {
   display: flex;
   width: 100%;
+}
+
+.houses__title {
+  margin: 0px 0px 40px 0px;
+}
+.houses__items {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(292px, 1fr));
+}
+.houses__item {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+@media (any-hover: hover) {
+  .houses__item img {
+    transition: all 0.2s ease 0s;
+    filter: grayscale(1);
+  }
+  .houses__item:hover img {
+    filter: grayscale(0);
+  }
+}
+.houses__image {
+  padding: 0px 0px 138.566552901% 0px;
 }
