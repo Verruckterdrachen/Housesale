@@ -95,6 +95,10 @@ body {
     @include adaptiv-value("padding-top", 35, 30, 1);
     @include adaptiv-value("padding-bottom", 100, 30, 1);
   }
+  &__phone {
+    @include adaptiv-value("padding-top", 100, 30, 1);
+    @include adaptiv-value("padding-bottom", 100, 30, 1);
+  }
 }
 //===================================================================================================================================
 .intro {
@@ -257,6 +261,39 @@ body {
   &__text {
     @include adaptiv-value("font-size", 21, 18, 1);
     line-height: 29 / 21 * 100%;
+  }
+}
+//============================================================================
+.phone {
+  &__container {
+    @media (max-width:$md3+px){
+      padding: 0; 
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #FFF5DA;
+    padding: 127px 288px 104px 188px;
+    @include adaptiv-value("padding-top", 127, 15, 1);
+    @include adaptiv-value("padding-right", 288, 15, 1);
+    @include adaptiv-value("padding-bottom", 104, 15, 1);
+    @include adaptiv-value("padding-left", 199, 15, 1);
+  }
+  &__title {
+    margin: 0px 0px 10px 0px;
+  }
+  &__text {
+    color: #646464;
+    @include adaptiv-value("font-size", 29, 18, 1);
+    line-height: 39 / 29 * 100%;
+    margin: 0px 0px 20px 0px;
+  }
+  &__form {
+    display: flex;
+    width: 100%;
   }
 }
 //============================================================================
